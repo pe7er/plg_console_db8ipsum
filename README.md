@@ -10,9 +10,9 @@ https://petermartin.nl/en/presentations/joomla/no-more-lorem-ipsum
 - After installation, under System > Plugins, select db8ipsum
 - Enable the plugin
 - Configure what it should create:
-  - # of Categories
+  - \# of Categories
   - A menu item for each Category
-  - # Articles per Category
+  - \# Articles per Category
   - A menu item for each Article
   - Should it generate an image for each Article/Category
   - configure the image folder (which will be created under /images/)
