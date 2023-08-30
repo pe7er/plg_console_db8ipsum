@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="console" method="upgrade">
+    <name>PLG_CONSOLE_DB8IPSUM</name>
+    <creationDate>May 2023</creationDate>
+    <author>Peter Martin</author>
+    <authorEmail>joomla@db8.nl</authorEmail>
+    <authorUrl>https://db8.nl</authorUrl>
+    <copyright>Copyright (C) 2021-2023 by Peter Martin</copyright>
+    <license>https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.0.0</version>
+    <description>PLG_CONSOLE_DB8IPSUM_XML_DESCRIPTION</description>
+    <namespace path="src">Joomla\Plugin\Console\Db8ipsum</namespace>
+    <files>
+        <filename plugin="db8ipsum">db8ipsum.php</filename>
+        <folder>language</folder>
+        <folder>services</folder>
+        <folder>src</folder>
+        <folder>vendor</folder>
+        <file>composer.json</file>
+        <file>composer.lock</file>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+
+                <field
+                        name="mainDb8IpsumCategory"
+                        type="text"
+                        default="db8-ipsum"
+                        label="PLG_CONSOLE_DB8IPSUM_MAIN_CATEGORY"
+                        filter="safehtml"
+                />
+
+                <field
+                        name="numberOfCategories"
+                        type="text"
+                        default="4"
+                        label="PLG_CONSOLE_DB8IPSUM_NUMBER_OF_CATEGORIES"
+                        filter="integer"
+                />
+
+                <field
+                        name="createCategoryBlogMenuItems"
+                        type="radio"
+                        label="PLG_CONSOLE_DB8IPSUM_CREATE_CATEGORY_BLOG_MENU_ITEMS"
+                        default="1"
+                        filter="integer"
+                        validate="options"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                        name="numberOfArticles"
+                        type="text"
+                        default="8"
+                        label="PLG_CONSOLE_DB8IPSUM_NUMBER_OF_ARTICLES"
+                        filter="integer"
+                />
+
+                <field
+                        name="createSingleArticleMenuItems"
+                        type="radio"
+                        label="PLG_CONSOLE_DB8IPSUM_CREATE_SINGLE_ARTICLE_MENU_ITEMS"
+                        default="1"
+                        filter="integer"
+                        validate="options"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                        name="createImages"
+                        type="radio"
+                        label="PLG_CONSOLE_DB8IPSUM_CREATE_IMAGES"
+                        default="1"
+                        filter="integer"
+                        validate="options"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+
+                <field
+                        name="imageFolder"
+                        type="text"
+                        default="db8_ipsum"
+                        label="PLG_CONSOLE_DB8IPSUM_IMAGE_FOLDER"
+                        filter="safehtml"
+                        showon="createImages:1"
+                />
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>
