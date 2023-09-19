@@ -20,13 +20,13 @@ https://petermartin.nl/en/presentations/joomla/no-more-lorem-ipsum
 ### Generate Content
 - On the command line in /cli/ do
 ```bash
-php joomla.php db8ipsum:create:content
+php joomla.php db8ipsum:content:create
 ```
 
 ### Remove the generate Content
 - On the command line in /cli/ do
 ```bash
-php joomla.php db8ipsum:remove:content
+php joomla.php db8ipsum:content:remove
 ```
 
 ## External libraries
